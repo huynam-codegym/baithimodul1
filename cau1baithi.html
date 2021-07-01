@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baithimodul1</title>
+</head>
+<body>
+<script>
+    function GPTBN(a,b){
+        if (a==0 &&b==0){
+            alert("Phuong trinh vo so nghiem");
+        }
+        if (a==0&&b!=0){
+            alert("Phuong trinh vo nghiem")
+        }
+        if (a!=0){
+            return -b/a;
+        }
+    }
+    GPTBN(5,10);
+    console.log(GPTBN);
+    //lam nham gai pt bac nhat tong qua
+    //     var a, b;
+    //
+    //     function nhapA() {
+    //     a = prompt('Nhap A')
+    // }
+    //
+    //     function nhapB() {
+    //     b = prompt('Nhap B')
+    // }
+    //
+    //     function printResult() {
+    //     if(a == 0) {
+    //     if(b == 0) {
+    //     alert('Phuongtrinhvosonghiem')
+    // } else {
+    //     alert('Phuongtrinhvonghiem')
+    // }
+    // } else {
+    //     x = -b/a
+    //     alert(x)
+    // }
+    // }
+
+
+    // Câu 2:
+    function indexof(a,arr){
+        let index = -1;
+        for (let i = 0 ; i <arr.length ; i++) {
+            if (a==arr[i]){
+                index = i;
+            }
+        }
+        return index;
+        console.log(index);
+    }
+
+
+    // Chay Chuong Trinh
+
+    let arr = [1,3,5];
+    arr1 = [2,5,8];
+    indexx=[];
+    function taoindex(){
+        for (let i = 0; i < arr1.length; i++) {
+            indexx.push(indexof(arr1[1],arr));
+        }
+        return indexx;
+        console.log(indexx);
+    }
+
+
+// cau3:
+
+    function counta(arr){
+        let arrsnam = ["a", "o", "e", "u", "i"];
+        let checknguyenam = false;
+        let counta=0;
+        for (let i = 0; i < arr.length; i++) {
+            let index = arrsnam.indexOf(arr[i]);
+            //gán gia tri
+            if (index!=-1){
+                checknguyenam=true;
+                counta++;
+            }
+        }
+        if(checknguyenam){
+            return counta;
+        } else {
+            return check;
+        }
+        console.log(check);
+    }
+
+    // Cau4
+
+    class Animal{
+            constructor(name,weight) {
+            this.name = name;
+            this.weight = weight;
+        }
+           setName(newName){
+            return this.name = newName;
+        }
+           setWeight(newWeight){
+            this.weight = newWeight;
+        }
+        getName(){
+            return this.name;
+        }
+        getWeight(){
+            return this.weight;
+        }
+          toString(){
+            return "name :"+this.name+";"+"weight:"+this.weight;
+        }
+
+    }
+
+
+    let objAnimal1= new Animal("Elephant",45.6);
+    objAnimal1.toString();
+
+    let objAnimal2= new Animal();
+    objAnimal1.setName("objAnimal2");
+    objAnimal1.setName("Mouse");
+    objAnimal1.setWeight(50);
+    console.log(objAnimal1);
+    console.log(objAnimal2);
+
+
+</script>
+
+</body>
+</html>
